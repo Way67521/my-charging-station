@@ -8,6 +8,7 @@ public class MyNettyApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MyNettyApplication.class, args);
+
     }
 
 }
