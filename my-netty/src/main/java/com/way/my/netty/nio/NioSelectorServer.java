@@ -21,6 +21,7 @@ public class NioSelectorServer {
         serverSocketChannel.configureBlocking(false);
         // 创建Selector处理Channel，即创建epoll
         Selector selector = Selector.open();
+
         // 把ServerSocketChannel注册到Selector上，并且监听客户端对服务端的accept连接事件
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         System.out.println("服务器启动成功");
