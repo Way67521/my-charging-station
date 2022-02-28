@@ -17,7 +17,7 @@ public class NioSelectorServer {
     public static void accept() throws IOException {
         /** 创建NIO ServerSocketChnnel*/
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
-        serverSocketChannel.bind(new InetSocketAddress(52168));
+        serverSocketChannel.bind(new InetSocketAddress(52167));
         serverSocketChannel.configureBlocking(false);
         // 创建Selector处理Channel，即创建epoll
         Selector selector = Selector.open();

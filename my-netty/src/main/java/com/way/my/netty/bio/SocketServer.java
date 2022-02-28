@@ -34,7 +34,7 @@ public class SocketServer {
         while (true){
             byte[] bytes = new byte[1024];
             System.out.println("reading"+Thread.currentThread().getName());
-            /** 准备接受客户端的数据，阻塞，没有数据读时就阻塞住*/
+            /* 准备接受客户端的数据，阻塞，没有数据读时就阻塞住 */
             int read = accept.getInputStream().read(bytes);
             System.out.println("read accomplished!");
             if (read != -1){
