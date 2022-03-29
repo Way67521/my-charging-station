@@ -27,7 +27,6 @@ public class MyNettyServer {
         // 创建处理连接请求的 boosGroup 和 处理客户业务的 workGroup  ，真正处理客户业务的任务交给 workGroup 来完成
         EventLoopGroup boosGroup = new NioEventLoopGroup();
         EventLoopGroup workGroup = new NioEventLoopGroup(8);
-
         // 创建客户端启动对象
         try {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
@@ -40,7 +39,6 @@ public class MyNettyServer {
                     .option(ChannelOption.SO_BACKLOG , 1024)
                     // 创建通道初始化对象，设置初始化参数
                     .childHandler(new ChannelInitializer<SocketChannel>(){
-
 
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {

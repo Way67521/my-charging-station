@@ -29,7 +29,7 @@ public class MyNettyClient {
 
         int max = Math.max(1, SystemPropertyUtil.getInt("io.netty.eventLoopThreads", NettyRuntime.availableProcessors() * 2));
         System.out.println("netty: " + max);
-//        clientListen();
+        clientListen();
     }
     public static void clientListen(){
         // 创建客户端事件循环组
@@ -56,13 +56,13 @@ public class MyNettyClient {
             ChannelFuture channelFuture = clientBootStrap.connect("127.0.0.1", 52167).sync();
             Channel channel = channelFuture.channel();
             Scanner scanner = new Scanner(System.in);
-//            while (scanner.hasNext()){
-//                String msg = scanner.next();
-//                channel.writeAndFlush(msg);
-//            }
-//            for (int i = 0; i < 1000; i++) {
-//                channel.writeAndFlush("Hello everyone!_");
-//            }
+            while (scanner.hasNext()){
+                String msg = scanner.next();
+                channel.writeAndFlush(msg);
+            }
+            for (int i = 0; i < 1000; i++) {
+                channel.writeAndFlush("Hello everyone!_");
+            }
             channelFuture.channel().closeFuture().sync();
         }catch (InterruptedException e) {
             e.printStackTrace();
