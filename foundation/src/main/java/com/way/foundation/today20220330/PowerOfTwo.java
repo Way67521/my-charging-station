@@ -5,7 +5,7 @@ package com.way.foundation.today20220330;
  */
 public class PowerOfTwo {
     public static void main(String[] args) {
-        int num = 1000000000;
+        int num = 1;
         long l01 = System.currentTimeMillis();
         boolean powerOfTwo01 = isPowerOfTwo01(num);
         System.out.println(powerOfTwo01);
