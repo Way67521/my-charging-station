@@ -1,6 +1,8 @@
 package com.way.foundation.today20220330;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -13,10 +15,16 @@ public class ReadAgeFile {
     public static void main(String[] args) {
 //        writeAge2File(1400000000);
         String fileName = "C:\\Users\\chinasoft\\Documents\\allAgeFile\\age.txt";
-        int[] ages = readFileAndCal(fileName);
-        for (int i = 0; i < ages.length; i++) {
-            System.out.println("年龄为：" + i + "的个数为：" + ages[i]);
-        }
+        List<String> test = new ArrayList<>();
+        test.add("1");
+        test.add("2");
+        test.add("3");
+        test.add(2, "5");
+        System.out.println(test.get(2));
+//        int[] ages = readFileAndCal(fileName);
+//        for (int i = 0; i < ages.length; i++) {
+//            System.out.println("年龄为：" + i + "的个数为：" + ages[i]);
+//        }
     }
 
     /**
